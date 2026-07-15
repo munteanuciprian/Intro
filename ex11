@@ -1,0 +1,11 @@
+def extremes_means(my_list):
+    lowest_num = min(my_list)
+    highest_num = max(my_list)
+
+    mean = (lowest_num + highest_num) / 2
+    geometric_mean = (lowest_num * highest_num) ** 0.5
+
+    return mean, geometric_mean
+
+ma, mg = extremes_means([22, 122, 23, 33, 98, 45])
+print(f"the mean is {ma} the geometric mean is {mg}")
