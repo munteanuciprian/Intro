@@ -1,0 +1,10 @@
+import re
+
+def numara_cuvinte(text):
+    cuvinte = re.split(r'[\s,;?!.]+', text)
+    cuvinte_filtrate = [cuvant for cuvant in cuvinte if cuvant != '']
+
+    return len(cuvinte_filtrate)
+
+text_test = "Salut, ce mai faci? Totul e bine... super!"
+print(f"Numarul de cuvinte din '{text_test}' este: {numara_cuvinte(text_test)}")
