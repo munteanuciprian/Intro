@@ -1,0 +1,12 @@
+def maxim_number(a, b, c):
+    maxim = a
+
+    if b > maxim:
+        maxim = b
+
+    if c > maxim:
+        maxim = c
+
+    return maxim
+
+print("The maxim number between 5, 26 and 103 is", maxim_number(5, 26, 103))
