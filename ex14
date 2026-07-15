@@ -1,0 +1,15 @@
+def sub_pal_list(mylist):
+
+    biggest = max(mylist)
+    smallest = min(mylist)
+
+    biggest_idx = mylist.index(biggest)
+    smallest_idx = mylist.index(smallest)
+
+    start_idx = min(biggest_idx, smallest_idx)
+    stop_idx = max(biggest_idx, smallest_idx)
+
+    return mylist[start_idx : stop_idx + 1]
+
+print("Cazul 1:", sub_pal_list([3, 1, 4, 9, 2]))
+print("Cazul 2 (maximul înainte):", sub_pal_list([3, 9, 4, 1, 2]))
