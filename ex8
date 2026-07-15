@@ -1,0 +1,10 @@
+def is_palindrome(num):
+    str_num = str(num)
+    str_num_inverse = str_num[::-1]
+    if str_num == str_num_inverse:
+        return "Palindrome"
+    else:
+        return "Not Palindrome"
+
+print("1331 is", is_palindrome(1331))
+print("1234 is", is_palindrome(1234))
