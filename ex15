@@ -1,0 +1,13 @@
+def sorted_matrix(matrix):
+    diagonal = []
+
+    n = len(matrix)
+    for i in range (n):
+        diagonal.append(matrix[i][i])
+
+    sorted_diagonal = sorted(diagonal, reverse = True)
+
+    return sorted_diagonal
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print("sorted diagonal", sorted_matrix(matrix))
