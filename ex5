@@ -1,0 +1,4 @@
+nr = 2**1024
+nr_str = str(nr)
+digits = len(nr_str)
+print(f"2**1024 has {digits} digits")
