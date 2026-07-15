@@ -1,0 +1,12 @@
+def is_prime(n):
+    if n <= 1:
+        return "is not Prime"
+
+    for i in range(2, n):
+        if n % i == 0:
+            return "is not Prime"
+
+    return "is Prime"
+
+print("number 17", is_prime(17))
+print("number 25", is_prime(25))
