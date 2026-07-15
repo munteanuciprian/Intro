@@ -1,0 +1,13 @@
+import math
+
+def cmmdc_mult(*numere):
+    if not numere:
+        return None
+
+    rezultat = numere[0]
+    for numar in numere[1:]:
+        rezultat = math.gcd(rezultat, numar)
+
+    return rezultat
+
+print("CMMDC pentru (21, 39, 51) este:", cmmdc_mult(21, 39, 51))
