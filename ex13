@@ -1,0 +1,16 @@
+def palindrome_filter(mylist):
+    rez = []
+
+    for x in mylist:
+
+        x_str = str(x)
+        palindrome = (x_str[::-1] == x_str)
+        even = (len(x_str) % 2 == 0)
+
+        if palindrome and even:
+            rez.append(x)
+
+    return rez
+
+mylist1 = [23232, 1221, 22222, 9889, 22122, 9009]
+print("palindrome and even numbers", palindrome_filter(mylist1))
