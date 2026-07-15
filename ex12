@@ -1,0 +1,15 @@
+def extremes_half(my_list):
+
+    length = len(my_list)
+    half = length // 2
+
+    st_half = my_list[:half]
+    nd_half = my_list[half:]
+
+    st_max = max(st_half)
+    nd_min = min(nd_half)
+
+    return st_max, nd_min
+
+st, nd = extremes_half([21321, 12323, 21323, 6546, 5464, 12386, 324, 32432])
+print(f"largest in 1st half is {st}, smallest in 2nd half is {nd}")
