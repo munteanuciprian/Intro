@@ -1,0 +1,12 @@
+def vocale_ct(text):
+    vocale = ['a','e','i','o','u','A','E','I','O','U']
+    contor = 0
+
+    for caracter in text:
+        if caracter in vocale:
+            contor += 1
+
+    return contor
+
+text_test = "Exercitii in Phyton"
+print(f"Numarul de vocale din '{text_test}' este: {vocale_ct(text_test)}")
