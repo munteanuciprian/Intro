@@ -1,0 +1,9 @@
+def elemente_cu_frecventa(x, *liste):
+    toate_elementele = []
+    for lista in liste:
+        toate_elementele.extend(lista)
+    rezultat = []
+    for element in set(toate_elementele):
+        if toate_elementele.count(element) == x:
+            rezultat.append(element)
+    return sorted(rezultat, key=lambda i: str(i))

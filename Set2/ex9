@@ -1,0 +1,2 @@
+def ordoneaza_tupluri(lista_tupluri):
+    return sorted(lista_tupluri, key=lambda t: t[1][2])

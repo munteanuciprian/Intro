@@ -1,0 +1,14 @@
+def filtru_ascii(*strings, x=1, flag=True):
+    rezultate = []
+    for sir in strings:
+        lista_caractere = []
+        for caracter in sir:
+            cod_ascii = ord(caracter)
+            if flag:
+                conditie = (cod_ascii % x == 0)
+            else:
+                conditie = (cod_ascii % x != 0)
+            if conditie:
+                lista_caractere.append(caracter)
+        rezultate.append(lista_caractere)
+    return tuple(rezultate)

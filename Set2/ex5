@@ -1,0 +1,4 @@
+import itertools
+
+def generare_combinari(lista_x, k):
+    return list(itertools.combinations(lista_x, k))
