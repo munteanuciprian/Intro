@@ -1,0 +1,15 @@
+def fibonacci(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+
+    rezultat = [0, 1]
+
+    while len(rezultat) < n:
+        urmatorul = rezultat[-1] + rezultat[-2]
+        rezultat.append(urmatorul)
+
+    return rezultat
+
+print("Primele 10 numere Fibonacci:", fibonacci(10))

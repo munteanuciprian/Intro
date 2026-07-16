@@ -1,0 +1,15 @@
+def este_prim(n):
+    if n <= 1:
+        return False
+
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+
+    return True
+
+def extrage_prime(lista_numere):
+    return [numar for numar in lista_numere if este_prim(numar)]
+
+numere = [1, 2, 3, 4, 5, 12, 13, 20, 23]
+print("Numerele prime din listă:", extrage_prime(numere))
