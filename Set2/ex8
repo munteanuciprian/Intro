@@ -1,0 +1,14 @@
+def custom_zip(*liste):
+    if not liste:
+        return []
+    lungime_maxima = max([len(lista) for lista in liste])
+    rezultat = []
+    for i in range(lungime_maxima):
+        tuplu_curent = []
+        for lista in liste:
+            if i < len(lista):
+                tuplu_curent.append(lista[i])
+            else:
+                tuplu_curent.append(None)
+        rezultat.append(tuple(tuplu_curent))
+    return rezultat
