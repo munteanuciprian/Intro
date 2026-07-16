@@ -1,0 +1,13 @@
+def are_caractere_speciale(text):
+    caractere_speciale = ['\t','\r', '\n', '\a', '\b', '\f', '\v']
+
+    for carecter in text:
+        if carecter in caractere_speciale:
+            return True
+
+    return False
+
+text1 = "nu \tsuntem acasa"
+text2 = "e frumos afara"
+
+print(f"'{text1}' contine caractere speciale? {are_caractere_speciale(text1)} \n'{text2}'  contine caractere speciale? {are_caractere_speciale(text2)}")

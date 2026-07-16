@@ -1,0 +1,7 @@
+def numara_subsir(text, text_complet):
+    ct = text_complet.count(text)
+    return ct
+
+text1 = "ca"
+text2 = "Lica nu stia sa zica rau ratusca ramurica"
+print(f"'{text1}' apare in '{text2} de {numara_subsir(text1, text2)} ori")
