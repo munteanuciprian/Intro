@@ -1,0 +1,15 @@
+def camel_to_snake(text):
+    rezultat = []
+
+    for i, caracter in enumerate(text):
+        if caracter.isupper() and i > 0:
+            rezultat.append('_')
+            rezultat.append(caracter.lower())
+        else:
+            rezultat.append(caracter.lower())
+
+    return "".join(rezultat)
+
+print(camel_to_snake("MyNameIs"))
+
+

@@ -1,0 +1,19 @@
+def fazan(char_len, *string):
+    if len(string) < 2:
+        return True
+    for i in range(len(string)-1):
+        cuvant_curent = string[i]
+        cuvant_urmator = string[i + 1]
+
+        sfarsit_primul = cuvant_curent[-char_len:]
+        inceput_al_doilea = cuvant_urmator[:char_len]
+
+        if sfarsit_primul.lower() != inceput_al_doilea.lower():
+            return False
+
+    return True
+
+#text1 = ["ratusca", "cacelarie", "iepure", "restaurant", "Final"]
+#text2 = ["ramura", "raliu", "iulie"]
+print(f"Se respecta regula? {fazan(2,"ratusca", "cacelarie", "iepure", "restaurant", "Final")}")
+print(f"Se respecta regula? {fazan(2,"ramura", "raliu", "iulie")}")

@@ -1,0 +1,26 @@
+import re
+
+def este_prim(n):
+    if n <= 1:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+
+    return True
+
+def cel_mai_mare_prim(text):
+    numere_gasite = re.findall(r'(\d+)', text)
+    numere_intregi = [int(numar) for numar in numere_gasite]
+
+    cel_mai_mare = -1
+
+    for numar in numere_intregi:
+        if este_prim(numar):
+            if numar > cel_mai_mare:
+                cel_mai_mare = numar
+
+    return cel_mai_mare
+
+text_exemplu = 'ahsfaisd35biaishai23isisvdshcbsi271cidsbfsd97sidsda'
+print("Cel mai mare număr prim din text este:", cel_mai_mare_prim(text_exemplu))
