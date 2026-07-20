@@ -1,0 +1,21 @@
+def compara_dictionare_recursiv(d1, d2):
+    valori_diferite = []
+    doar_in_d1 = []
+    doar_in_d2 = []
+    for cheie in d1:
+        if cheie not in d2:
+            doar_in_d1.append(cheie)
+    for cheie in d2:
+        if cheie not in d1:
+            doar_in_d2.append(cheie)
+    for cheie in d1:
+        if cheie in d2:
+            val1 = d1[cheie]
+            val2 = d2[cheie]
+            if isinstance(val1, dict) and isinstance(val2, dict):
+                sub_dif, sub_d1, sub_d2 = compara_dictionare_recursiv(val1, val2)
+                if sub_dif or sub_d1 or sub_d2:
+                    valori_diferite.append(cheie)
+            elif val1 != val2:
+                valori_diferite.append(cheie)
+    return valori_diferite, doar_in_d1, doar_in_d2

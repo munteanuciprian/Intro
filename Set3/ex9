@@ -1,0 +1,16 @@
+def operatii_perechi_seturi(*seturi):
+    rezultat = {}
+    n = len(seturi)
+    for i in range(n):
+        for j in range(n):
+            if i == j:
+                continue
+            s1 = seturi[i]
+            s2 = seturi[j]
+            reuniune_cheie = f"{s1} | {s2}"
+            intersectie_cheie = f"{s1} & {s2}"
+            diferenta_cheie = f"{s1} - {s2}"
+            rezultat[reuniune_cheie] = len(s1 | s2)
+            rezultat[intersectie_cheie] = len(s1 & s2)
+            rezultat[diferenta_cheie] = len(s1 - s2)
+    return rezultat

@@ -1,0 +1,17 @@
+def validate_dict(rules, dictionar):
+    chei_permise = {regula[0] for regula in rules}
+    for cheie in dictionar:
+        if cheie not in chei_permise:
+            return False
+    for cheie, prefix, middle, sufix in rules:
+        if cheie not in dictionar:
+            return False
+        valoare = dictionar[cheie]
+        if prefix and not valoare.startswith(prefix):
+            return False
+        if sufix and not valoare.endswith(sufix):
+            return False
+        if middle:
+            if middle not in valoare or valoare.startswith(middle) or valoare.endswith(middle):
+                return False
+    return True

@@ -1,0 +1,10 @@
+def statistici_duplicate(colectie):
+    unice = set()
+    duplicate = set()
+    for element in colectie:
+        if element in unice:
+            duplicate.add(element)
+        else:
+            unice.add(element)
+    unice_reale = len(unice - duplicate)
+    return unice_reale, len(duplicate)
