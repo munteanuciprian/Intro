@@ -1,0 +1,4 @@
+def operatii_seturi(lista_a, lista_b):
+    set_a = set(lista_a)
+    set_b = set(lista_b)
+    return set_a & set_b, set_a | set_b, set_a - set_b, set_b - set_a

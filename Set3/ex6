@@ -1,0 +1,11 @@
+OPERATORI = {
+    "+": lambda a, b: a + b,
+    "*": lambda a, b: a * b,
+    "/": lambda a, b: a / b,
+    "%": lambda a, b: a % b 
+}
+
+def apply_operator(operator, a, b):
+    if operator in OPERATORI:
+        return OPERATORI[operator](a, b)
+    return None

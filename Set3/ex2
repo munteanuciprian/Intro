@@ -1,0 +1,8 @@
+def numara_caractere(text):
+    dictionar_frecvente = {}
+    for caracter in text:
+        if caracter in dictionar_frecvente:
+            dictionar_frecvente[caracter] += 1
+        else:
+            dictionar_frecvente[caracter] = 1
+    return dictionar_frecvente

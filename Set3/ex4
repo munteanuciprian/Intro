@@ -1,0 +1,10 @@
+def build_xml_element(tag, content, **atribute):
+    atribute_xml = []
+    for cheie, valoare in atribute.items():
+        if cheie.startswith("_"):
+            cheie_curata = cheie[1:]
+        else:
+            cheie_curata = cheie
+        atribute_xml.append(f'{cheie_curata}="{valoare}"')
+    string_atribute = " " + " ".join(atribute_xml) if atribute_xml else ""
+    return f"<{tag}{string_atribute}>{content}</{tag}>"
